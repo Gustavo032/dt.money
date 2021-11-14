@@ -13,7 +13,7 @@ interface NewTransactionModalProps{
 
 export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionModalProps){
     const [title, setTitle] = useState('');
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0.00);
     const [type, setType] = useState('deposit');
     const [category, setCategory] = useState('');
 
