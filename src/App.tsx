@@ -10,7 +10,7 @@ import { Header } from './components/Header/index'
 
 import { GlobalStyle } from './styles/global'
 
-import { TransactionsContext, TransactionsProvider } from './TransactionsContext'
+import { TransactionsProvider } from './hooks/useTransactions'
 
 Modal.setAppElement('#root')
 
