@@ -57,6 +57,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
                 <h2>Cadastrar Transação</h2>
 
                 <input 
+                    required
                     type="text"
                     placeholder="Título" 
                     value={title} 
@@ -64,6 +65,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
                 />
 
                 <input 
+                    required
                     type="number" 
                     placeholder="Valor" 
                     value={amount} 
