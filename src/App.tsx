@@ -10,6 +10,8 @@ import { Header } from './components/Header/index'
 
 import { GlobalStyle } from './styles/global'
 
+import { TransactionsContext, TransactionsProvider } from './TransactionsContext'
+
 Modal.setAppElement('#root')
 
 export function App() {
@@ -24,16 +26,20 @@ export function App() {
   };
 
   return (
-    <>
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
+    <TransactionsProvider>
+      <Header 
+        onOpenNewTransactionModal={handleOpenNewTransactionModal} 
+      />
+
       <Dashboard />
 
-    <NewTransactionModal 
-      isOpen={isNewTransactionModalOpen}
-      onRequestClose={handleCloseNewTransactionModal}
-    />
+      <NewTransactionModal 
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      />
 
       <GlobalStyle />
-    </>
+
+    </TransactionsProvider>
   );
 }
